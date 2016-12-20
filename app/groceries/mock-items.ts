@@ -1,8 +1,8 @@
 import { Item } from './item';
 
 export const ITEMS: Item[] = [
-  { name: 'flour' },
-  { name: 'sugar' },
-  { name: 'eggs' },
-  { name: 'soda' },
+  { id: 1, name: 'flour' },
+  { id: 2, name: 'sugar' },
+  { id: 3, name: 'eggs' },
+  { id: 4, name: 'soda' },
 ];
