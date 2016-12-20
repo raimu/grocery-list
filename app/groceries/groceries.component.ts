@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Item } from './item';
 import { ItemService } from './item.service';
@@ -13,7 +14,9 @@ export class GroceriesComponent implements OnInit {
   items: Item[] = [];
   selectedItem: Item;
 
-  constructor(private itemService: ItemService) {}
+  constructor(
+    private router: Router,
+    private itemService: ItemService) {}
 
   ngOnInit(): void {
     this.getItems();
@@ -24,6 +27,13 @@ export class GroceriesComponent implements OnInit {
   }
 
   onSelect(item: Item) {
+    if (this.selectedItem === item) {
+      this.gotoDetail(item);
+    }
     this.selectedItem = item;
+  }
+
+  gotoDetail(item: Item) {
+    this.router.navigate(['/detail', item.name]);
   }
 }

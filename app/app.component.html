@@ -24,13 +24,13 @@
   </header>
   <div class="demo-drawer mdl-layout__drawer">
     <nav class="demo-navigation mdl-navigation">
-      <a class="mdl-navigation__link" href="">
+      <a class="mdl-navigation__link" routerLink="/groceries" routerLinkActive="active">
         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>
-        <span>Help</span>
+        <span>Grocery list</span>
       </a>
     </nav>
   </div>
   <main class="mdl-layout__content mdl-color--grey-100">
-    <my-groceries></my-groceries>
+    <router-outlet></router-outlet>
   </main>
 </div>
