@@ -1,26 +1,18 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
 
+import { GroceriesModule } from './groceries/groceries.module';
 import { AppComponent }  from './app.component';
 import { MDLDirective } from './mdl.directive';
-import { GroceriesComponent } from './groceries.component';
-import { ItemDetailComponent } from './item-detail.component';
-import { ItemService } from './item.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    GroceriesModule
   ],
   declarations: [
     AppComponent,
-    MDLDirective,
-    GroceriesComponent,
-    ItemDetailComponent
-  ],
-  providers: [
-    ItemService
+    MDLDirective
   ],
   bootstrap:    [ AppComponent ]
 })
