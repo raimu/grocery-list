@@ -1,7 +1,10 @@
-<ul class="groceries">
+<ul class="groceries mdl-list">
   <li *ngFor="let item of items"
     [class.selected]="item === selectedItem"
-    (click)="onSelect(item)">
-    <span class="badge">{{item.id}}</span> {{item.name}}
+    (click)="onSelect(item)"
+    class="mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+      {{item.name}}
+    </span>
   </li>
 </ul>
