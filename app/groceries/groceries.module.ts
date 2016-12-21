@@ -5,6 +5,8 @@ import { FormsModule }   from '@angular/forms';
 import { GroceriesRoutingModule } from './groceries-routing.module';
 import { GroceriesComponent } from './groceries.component';
 import { ItemDetailComponent } from './item-detail.component';
+import { AddItemComponent } from './add-item.component';
+import { ItemFormComponent } from './item-form.component';
 import { ItemService } from './item.service';
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ItemService } from './item.service';
   ],
   declarations: [
     GroceriesComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    AddItemComponent,
+    ItemFormComponent
   ],
   providers: [
     ItemService

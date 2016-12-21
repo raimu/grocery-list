@@ -8,7 +8,9 @@ import { ItemService } from './item.service';
   moduleId: module.id,
   selector: 'my-groceries',
   templateUrl: 'groceries.component.html',
-  styles: [`.selected { background: #eee; }`]
+  styles: [`
+    .selected { background: #eee; }
+    .add-button { position: fixed; bottom: 1em; right: 1em }`]
 })
 export class GroceriesComponent implements OnInit {
   items: Item[] = [];
@@ -34,6 +36,10 @@ export class GroceriesComponent implements OnInit {
   }
 
   gotoDetail(item: Item) {
-    this.router.navigate(['/detail', item.id]);
+    this.router.navigate(['/groceries/detail', item.id]);
+  }
+
+  add(): void {
+    this.router.navigate(['/groceries/add']);
   }
 }
