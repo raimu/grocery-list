@@ -11,3 +11,6 @@ _test-output
 _temp
 .DS_Store
 /dist
+/cordova/platforms
+/cordova/plugins
+/cordova/www
