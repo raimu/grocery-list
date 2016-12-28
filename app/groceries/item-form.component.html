@@ -1,14 +1,14 @@
 <div *ngIf="item">
-  <p>
-    <label>amount: </label>
-    <input [(ngModel)]="item.amount" placeholder="amount" />
-  </p>
-  <p>
-    <label>unit: </label>
-    <input [(ngModel)]="item.unit" placeholder="unit" />
-  </p>
-  <p>
-    <label>name: </label>
-    <input [(ngModel)]="item.name" placeholder="name" />
-  </p>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input [(ngModel)]="item.amount" value="{{item.amount}}" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="amount">
+    <label class="mdl-textfield__label" for="amount">Amount</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input [(ngModel)]="item.unit" value="{{item.unit}}" class="mdl-textfield__input" type="text" id="unit">
+    <label class="mdl-textfield__label" for="unit">Unit</label>
+  </div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input [(ngModel)]="item.name" value="{{item.name}}" class="mdl-textfield__input" type="text" id="name">
+    <label class="mdl-textfield__label" for="name">Name</label>
+  </div>
 </div>
