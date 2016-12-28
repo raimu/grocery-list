@@ -1,6 +1,6 @@
 <div *ngIf="item">
   <h2>{{item.name}} details!</h2>
   <my-item-form [item]="item"></my-item-form>
-  <button (click)="save()">Save</button>
-  <button (click)="goBack()">Back</button>
+  <button (click)="save()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Save</button>
+  <button (click)="goBack()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Back</button>
 </div>
