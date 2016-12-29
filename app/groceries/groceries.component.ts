@@ -36,7 +36,7 @@ export class GroceriesComponent implements OnInit {
   }
 
   gotoDetail(item: Item) {
-    this.router.navigate(['/groceries/detail', item.id]);
+    this.router.navigate(['/groceries/detail', item._id]);
   }
 
   add(): void {

@@ -23,7 +23,7 @@ export class ItemDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params
-      .switchMap((params: Params) => this.itemService.getItem(+params['id']))
+      .switchMap((params: Params) => this.itemService.getItem(params['id']))
       .subscribe(item => this.item = item);
   }
 
@@ -32,6 +32,12 @@ export class ItemDetailComponent implements OnInit {
   }
 
   save(): void {
-    console.log('Not implemented now!');
+    this.itemService.save(this.item);
+    this.goBack();
+  }
+
+  delete(): void {
+    this.itemService.delete(this.item);
+    this.goBack();
   }
 }

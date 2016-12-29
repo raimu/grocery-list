@@ -33,7 +33,8 @@ gulp.task('copy-3rd-party', function() {
       'node_modules/reflect-metadata/Reflect.js',
       'node_modules/systemjs/dist/system.src.js',
       'node_modules/@angular/**/*js',
-      'node_modules/rxjs/**/*.js'
+      'node_modules/rxjs/**/*.js',
+      'node_modules/pouchdb/dist/pouchdb.min.js'
       ], {base: './node_modules'})
     .pipe(gulp.dest('./dist/3rdparty'))
 });
