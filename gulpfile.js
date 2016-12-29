@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const ts = require('gulp-typescript');
-var gulpCopy = require('gulp-copy');
 
 gulp.task('typescript', function () {
   var tsProject = ts.createProject('tsconfig.json');
