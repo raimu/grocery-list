@@ -3,4 +3,5 @@ export class Item {
   amount?: number;
   unit?: string;
   name: string;
+  done?: boolean;
 }

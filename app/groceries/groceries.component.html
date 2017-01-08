@@ -1,14 +1,23 @@
-<ul class="groceries mdl-list">
-  <li *ngFor="let item of items"
-    [class.selected]="item === selectedItem"
-    (click)="onSelect(item)"
-    class="mdl-list__item">
-    <span class="mdl-list__item-primary-content">
-      {{item.amount}}{{item.unit}}
-      {{item.name}}
-    </span>
-  </li>
-</ul>
+<div class="mdl-grid"
+  *ngFor="let item of items"
+  (click)="onSelect(item)"
+  [class.selected]="item === selectedItem">
+  <div class="mdl-cell mdl-cell--1-col"
+    [class.done]="item.done">
+    {{item.amount}}{{item.unit}}
+  </div>
+  <div class="mdl-cell mdl-cell--10-col mdl-cell--2-col-phone mdl-cell--6-col-tablet"
+    [class.done]="item.done">
+    {{item.name}}
+  </div>
+  <div class="mdl-cell mdl-cell--1-col">
+    <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"
+      (click)="gotoDetail(item)"
+      class="pull-right">
+      <i class="material-icons">edit</i>
+    </button>
+  </div>
+</div>
 
 <button (click)="add()"
   class="add-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">

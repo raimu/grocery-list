@@ -10,7 +10,10 @@ import { ItemService } from './item.service';
   templateUrl: 'groceries.component.html',
   styles: [`
     .selected { background: #eee; }
-    .add-button { position: fixed; bottom: 1em; right: 1em }`]
+    .add-button { position: fixed; bottom: 1em; right: 1em }
+    button { border: none; background: none; }
+    .pull-right { float: right; }
+    .done { text-decoration: line-through; color: #bdbdbd; }`]
 })
 export class GroceriesComponent implements OnInit {
   items: Item[] = [];
@@ -29,9 +32,8 @@ export class GroceriesComponent implements OnInit {
   }
 
   onSelect(item: Item) {
-    if (this.selectedItem === item) {
-      this.gotoDetail(item);
-    }
+    item.done = item.done ? false : true;
+    this.itemService.save(item);
     this.selectedItem = item;
   }
 
