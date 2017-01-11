@@ -1,14 +1,31 @@
-<div *ngIf="item">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input [(ngModel)]="item.amount" value="{{item.amount}}" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="amount">
-    <label class="mdl-textfield__label" for="amount">Amount</label>
+<div *ngIf="item" class="mdl-grid">
+
+  <div class="mdl-cell mdl-cell--4-col">
+    <md-input-container>
+      <input md-input
+        type="number"
+        pattern="-?[0-9]*(\.[0-9]+)?"
+        placeholder="Amount"
+        [(ngModel)]="item.amount">
+    </md-input-container>
   </div>
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input [(ngModel)]="item.unit" value="{{item.unit}}" class="mdl-textfield__input" type="text" id="unit">
-    <label class="mdl-textfield__label" for="unit">Unit</label>
+
+  <div class="mdl-cell mdl-cell--4-col">
+    <md-input-container>
+      <input md-input
+        type="text"
+        placeholder="Unit"
+        [(ngModel)]="item.unit">
+    </md-input-container>
   </div>
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input [(ngModel)]="item.name" value="{{item.name}}" class="mdl-textfield__input" type="text" id="name">
-    <label class="mdl-textfield__label" for="name">Name</label>
+
+  <div class="mdl-cell mdl-cell--4-col">
+    <md-input-container>
+      <input md-input
+        type="text"
+        placeholder="Name"
+        maxlength="100"
+        [(ngModel)]="item.name">
+    </md-input-container>
   </div>
 </div>
