@@ -42,7 +42,7 @@ export class ItemService {
   }
 
   create(item: Item): Promise<Item> {
-    item._id = this.uuid();
+    item._id = this.generateNewId();
     this.db.put(item);
     return Promise.resolve(item);
   }
@@ -53,6 +53,12 @@ export class ItemService {
 
   delete(item: Item): void {
     this.db.remove(item);
+  }
+
+  private generateNewId(): string {
+    let time = new Date().getTime();
+    let uuid = this.uuid();
+    return `${time}-${uuid}`;
   }
 
   private uuid() {
