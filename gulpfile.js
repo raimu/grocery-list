@@ -27,6 +27,7 @@ gulp.task('copy-3rd-party', function() {
       'node_modules/material-design-icons/iconfont/material-icons.css',
       'node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2',
       'node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff',
+      'node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css',
       'node_modules/core-js/client/shim.min.js',
       'node_modules/zone.js/dist/zone.js',
       'node_modules/reflect-metadata/Reflect.js',
