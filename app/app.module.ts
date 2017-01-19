@@ -4,6 +4,7 @@ import { RouterModule }  from '@angular/router';
 
 import { GroceriesModule } from './groceries/groceries.module';
 import { AppComponent }  from './app.component';
+import { ToolbarComponent } from './toolbar.component';
 import { MDLDirective } from './mdl.directive';
 import { ToolbarService } from './toolbar.service';
 
@@ -15,6 +16,7 @@ import { ToolbarService } from './toolbar.service';
   ],
   declarations: [
     AppComponent,
+    ToolbarComponent,
     MDLDirective
   ],
   providers: [
