@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { Item } from './item';
 import { ItemService } from './item.service';
+import { ToolbarService } from '../toolbar.service';
 
 @Component({
   moduleId: module.id,
@@ -21,10 +22,12 @@ export class GroceriesComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private itemService: ItemService) {}
+    private itemService: ItemService,
+    private toolbarService: ToolbarService) {}
 
   ngOnInit(): void {
     this.getItems();
+    this.toolbarService.setMenu(['delete all selected items']);
   }
 
   getItems(): void {

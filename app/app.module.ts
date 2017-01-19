@@ -5,6 +5,7 @@ import { RouterModule }  from '@angular/router';
 import { GroceriesModule } from './groceries/groceries.module';
 import { AppComponent }  from './app.component';
 import { MDLDirective } from './mdl.directive';
+import { ToolbarService } from './toolbar.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { MDLDirective } from './mdl.directive';
   declarations: [
     AppComponent,
     MDLDirective
+  ],
+  providers: [
+    ToolbarService
   ],
   bootstrap:    [ AppComponent ]
 })
