@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { ToolbarService } from './toolbar.service';
+import { ToolbarService } from '../toolbar.service';
 
 @Component({
   moduleId: module.id,
