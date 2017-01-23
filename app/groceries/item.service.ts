@@ -1,27 +1,7 @@
 import { Injectable } from '@angular/core';
+import 'pouchdb';
 
 import { Item } from './item';
-declare var PouchDB: any;
-
-class PouchDBError {
-  error: boolean;
-  message: string;
-  name: string;
-  status: number;
-}
-
-class PouchDBResult<Type> {
-  offset: number;
-  rows: PouchDBDocument<Type>[];
-  total_rows: number;
-}
-
-class PouchDBDocument<Type> {
-  doc: Type;
-  id: string;
-  key: string;
-  value: any;
-}
 
 @Injectable()
 export class ItemService {
@@ -29,11 +9,12 @@ export class ItemService {
 
   getItems(): Promise<Item[]> {
     let result: Item[] = [];
-    this.db.allDocs({include_docs: true, descending: true}, (error: PouchDBError, doc: PouchDBResult<Item>) => {
-      doc.rows.forEach((document) => {
-        result.push(document.doc);
+    this.db.allDocs({ include_docs: true, descending: true })
+      .then((doc) => {
+        doc.rows.forEach((document) => {
+          result.push(<Item>document.doc);
+        });
       });
-    });
     return Promise.resolve(result);
   }
 
@@ -52,7 +33,7 @@ export class ItemService {
   }
 
   delete(item: Item): void {
-    this.db.remove(item);
+    this.db.remove(<PouchDB.Core.RemoveDocument>item);
   }
 
   private generateNewId(): string {
