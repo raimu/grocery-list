@@ -9,7 +9,7 @@ export class ItemService {
 
   getItems(): Promise<Item[]> {
     let result: Item[] = [];
-    this.db.allDocs({ include_docs: true, descending: true })
+    this.db.allDocs({ include_docs: true })
       .then((doc) => {
         doc.rows.forEach((document) => {
           result.push(<Item>document.doc);
