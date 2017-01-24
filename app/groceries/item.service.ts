@@ -6,6 +6,7 @@ import { Item } from './item';
 @Injectable()
 export class ItemService {
   private db = new PouchDB('grocery-list');
+  private idPrefix = "item"
 
   getItems(): Promise<Item[]> {
     let result: Item[] = [];
@@ -39,7 +40,7 @@ export class ItemService {
   private generateNewId(): string {
     let time = new Date().getTime();
     let uuid = this.uuid();
-    return `${time}-${uuid}`;
+    return `${this.idPrefix}-${time}-${uuid}`;
   }
 
   private uuid() {
