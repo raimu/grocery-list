@@ -34,12 +34,6 @@ export class GroceriesComponent implements OnInit {
     this.itemService.getItems().then(items => this.items = items);
   }
 
-  onSelect(item: Item) {
-    item.done = item.done ? false : true;
-    this.itemService.save(item);
-    this.selectedItem = item;
-  }
-
   gotoDetail(item: Item) {
     this.router.navigate(['/groceries/detail', item._id]);
   }
