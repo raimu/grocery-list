@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { ItemListComponent } from './item-list.component';
 
@@ -7,8 +8,12 @@ describe('ItemListComponent', () => {
   let fixture: ComponentFixture<ItemListComponent>;
 
   beforeEach(async(() => {
+    const routerStub = {};
     TestBed.configureTestingModule({
-      declarations: [ ItemListComponent ]
+      declarations: [ ItemListComponent ],
+      providers: [
+        { provide: Router, useValue: routerStub }
+      ]
     })
     .compileComponents();
   }));
