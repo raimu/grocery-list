@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '@angular/material';
 
+import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -22,7 +22,7 @@ import { ItemService } from './item.service';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule,
+    AppMaterialModule,
     AppRoutingModule
   ],
   providers: [
