@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ItemListComponent } from './item-list/item-list.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { EditItemComponent } from './edit-item/edit-item.component';
 import { ItemService } from './item.service';
 import { environment } from '../environments/environment';
 
@@ -18,7 +19,8 @@ import { environment } from '../environments/environment';
     AppComponent,
     PageNotFoundComponent,
     ItemListComponent,
-    AddItemComponent
+    AddItemComponent,
+    EditItemComponent
   ],
   imports: [
     BrowserModule,

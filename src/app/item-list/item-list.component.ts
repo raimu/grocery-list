@@ -28,4 +28,8 @@ export class ItemListComponent implements OnInit {
   add() {
     this.router.navigate(['/items/add']);
   }
+
+  edit(item: Item) {
+    this.router.navigate(['/items/edit', item._id]);
+  }
 }

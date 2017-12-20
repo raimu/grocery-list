@@ -29,8 +29,8 @@ export class ItemService {
     return Promise.resolve(item);
   }
 
-  save(item: Item): void {
-    this.db.put(item);
+  save(item: Item): Promise<PouchDB.Core.Response> {
+    return this.db.put(item);
   }
 
   delete(item: Item): void {

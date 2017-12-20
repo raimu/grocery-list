@@ -1,0 +1,30 @@
+<form class="edit-item" *ngIf="item">
+  <mat-form-field class="full-width">
+    <input matInput
+      name="amount"
+      type="number"
+      placeholder="Amount"
+      [(ngModel)]="item.amount">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput
+      name="unit"
+      type="text"
+      placeholder="Unit"
+      [(ngModel)]="item.unit">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput
+      name="name"
+      type="text"
+      placeholder="Name"
+      [(ngModel)]="item.name">
+  </mat-form-field>
+
+  <div class="button-bar">
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+  </div>
+</form>
