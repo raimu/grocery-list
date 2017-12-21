@@ -13,6 +13,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { ItemService } from './item.service';
 import { environment } from '../environments/environment';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { environment } from '../environments/environment';
     PageNotFoundComponent,
     ItemListComponent,
     AddItemComponent,
-    EditItemComponent
+    EditItemComponent,
+    ItemFormComponent
   ],
   imports: [
     BrowserModule,

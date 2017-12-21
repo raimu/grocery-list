@@ -1,0 +1,25 @@
+<form class="add-item" *ngIf="item">
+  <mat-form-field class="full-width">
+    <input matInput
+      name="amount"
+      type="number"
+      placeholder="Amount"
+      [(ngModel)]="item.amount">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput
+      name="unit"
+      type="text"
+      placeholder="Unit"
+      [(ngModel)]="item.unit">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput
+      name="name"
+      type="text"
+      placeholder="Name"
+      [(ngModel)]="item.name">
+  </mat-form-field>
+</form>

@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Location } from '@angular/common';
 
 import { AddItemComponent } from './add-item.component';
@@ -14,7 +13,6 @@ describe('AddItemComponent', () => {
     const locationStub = {};
     const itemServiceStub = {};
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
       declarations: [ AddItemComponent ],
       providers: [
         { provide: Location, useValue: locationStub },

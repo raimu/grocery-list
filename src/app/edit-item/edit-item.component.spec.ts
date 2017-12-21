@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
@@ -20,7 +19,6 @@ describe('EditItemComponent', () => {
     const locationStub = {};
     const itemServiceStub = {};
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
       declarations: [ EditItemComponent ],
       providers: [
         { provide: ActivatedRoute, useValue: activatedRouteStub },
