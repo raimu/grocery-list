@@ -15,6 +15,7 @@ import { EditItemComponent } from './edit-item/edit-item.component';
 import { ItemService } from './item.service';
 import { environment } from '../environments/environment';
 import { ItemFormComponent } from './item-form/item-form.component';
+import { CardPageComponent } from './card-page/card-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ItemFormComponent } from './item-form/item-form.component';
     ItemListComponent,
     AddItemComponent,
     EditItemComponent,
-    ItemFormComponent
+    ItemFormComponent,
+    CardPageComponent
   ],
   imports: [
     BrowserModule,

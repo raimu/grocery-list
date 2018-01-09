@@ -1,16 +1,10 @@
-<div
-  [ngStyle.xs]="{ height: '100%' }"
-  [ngStyle.gt-xs]="{ margin: '1em' }"
-  fxLayout="row"
-  fxLayoutAlign="center stretch">
-  <mat-card fxFlex.xs="100%" fxFlex.gt-xs="400px">
-    <mat-list>
-      <mat-list-item *ngFor="let item of items" (click)="edit(item)">
-        {{item.amount}} {{item.unit}} {{item.name}}
-      </mat-list-item>
-    </mat-list>
-  </mat-card>
-</div>
+<app-card-page>
+  <mat-list>
+    <mat-list-item *ngFor="let item of items" (click)="edit(item)">
+      {{item.amount}} {{item.unit}} {{item.name}}
+    </mat-list-item>
+  </mat-list>
+</app-card-page>
 
 <button (click)="add()" class="add-item" mat-fab>
   <mat-icon>add</mat-icon>
