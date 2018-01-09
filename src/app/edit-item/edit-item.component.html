@@ -1,5 +1,13 @@
-<app-item-form [item]="item"></app-item-form>
-<div class="button-bar">
-  <button mat-raised-button (click)="cancel()">Cancel</button>
-  <button mat-raised-button color="primary" (click)="save()">Save</button>
+<div
+  [ngStyle.xs]="{ height: '100%' }"
+  [ngStyle.gt-xs]="{ margin: '1em' }"
+  fxLayout="row"
+  fxLayoutAlign="center stretch">
+  <mat-card fxFlex.xs="100%" fxFlex.gt-xs="400px">
+    <app-item-form [item]="item"></app-item-form>
+    <div class="button-bar">
+      <button mat-raised-button (click)="cancel()">Cancel</button>
+      <button mat-raised-button color="primary" (click)="save()">Save</button>
+    </div>
+  </mat-card>
 </div>

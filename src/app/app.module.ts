@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +30,7 @@ import { ItemFormComponent } from './item-form/item-form.component';
     BrowserAnimationsModule,
     FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    FlexLayoutModule,
     AppMaterialModule,
     AppRoutingModule
   ],

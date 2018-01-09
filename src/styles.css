@@ -2,4 +2,10 @@
 
 body {
   margin: 0;
+  background: #FAFAFA;
+}
+
+body, html, app-root {
+  height: 100%;
+  width: 100%;
 }
