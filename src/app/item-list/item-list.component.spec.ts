@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { AppMaterialModule } from '../app-material.module';
 import { ItemListComponent } from './item-list.component';
 import { ItemService } from '../item.service';
 
@@ -15,6 +16,7 @@ describe('ItemListComponent', () => {
       getItems: () => new Promise(() => [{ name: 'Salt' }])
     };
     TestBed.configureTestingModule({
+      imports: [ AppMaterialModule ],
       declarations: [ ItemListComponent ],
       providers: [
         { provide: Router, useValue: routerStub },
