@@ -32,4 +32,9 @@ export class ItemListComponent implements OnInit {
   edit(item: Item) {
     this.router.navigate(['/items/edit', item._id]);
   }
+
+  delete(item: Item) {
+    this.itemService.delete(item);
+    this.items = this.items.filter(i => i._id !== item._id);
+  }
 }
