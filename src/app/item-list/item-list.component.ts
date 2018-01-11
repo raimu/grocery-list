@@ -37,4 +37,9 @@ export class ItemListComponent implements OnInit {
     this.itemService.delete(item);
     this.items = this.items.filter(i => i._id !== item._id);
   }
+
+  done(item: Item) {
+    item.done = !item.done;
+    this.itemService.save(item).then(i => item._rev = i.rev);
+  }
 }

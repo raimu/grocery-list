@@ -3,3 +3,8 @@
   bottom: 2em;
   right: 2em;
 }
+
+.done {
+  text-decoration: line-through;
+  color: #9E9E9E;
+}

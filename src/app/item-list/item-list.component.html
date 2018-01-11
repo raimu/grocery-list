@@ -1,7 +1,7 @@
 <app-card-page>
   <mat-list>
     <mat-list-item *ngFor="let item of items" fxLayout="column">
-      <div fxFlex="grow">
+      <div fxFlex="grow" (click)="done(item)" [class.done]="item.done">
         {{item.amount}} {{item.unit}} {{item.name}}
       </div>
       <div fxFlex>
