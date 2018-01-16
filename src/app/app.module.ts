@@ -31,7 +31,7 @@ import { CardPageComponent } from './card-page/card-page.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
     FlexLayoutModule,
     AppMaterialModule,
     AppRoutingModule
